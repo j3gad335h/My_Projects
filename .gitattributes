@@ -1,2 +1,3 @@
 *.sql linguist-detectable=true
+
 notebooks/** linguist-vendored
