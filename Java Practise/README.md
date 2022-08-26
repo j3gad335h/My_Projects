@@ -1,4 +1,9 @@
 **Object Oriented Programming**
+<<<<<<< HEAD
+=======
+
+	Is a methodology to design a program using classes and objects. It simplifies software development and maintenance.
+>>>>>>> 654f56c85719e33884e0e315f7dcc2b8bc874e30
 
 Is a methodology to design a program using classes and objects. It
 simplifies software development and maintenance.
