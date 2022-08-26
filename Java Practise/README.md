@@ -1,12 +1,8 @@
 **Object Oriented Programming**
-<<<<<<< HEAD
 =======
 
 	Is a methodology to design a program using classes and objects. It simplifies software development and maintenance.
->>>>>>> 654f56c85719e33884e0e315f7dcc2b8bc874e30
 
-Is a methodology to design a program using classes and objects. It
-simplifies software development and maintenance.
 
 -   Object
 
@@ -20,8 +16,10 @@ simplifies software development and maintenance.
 
 -   Encapsulation
 
-![](vertopal_b24e1fc6a1f94f678ed66f270cc3f6cf/media/image1.png){width="5.802083333333333in"
-height="4.46875in"}
+<p align="center">
+  <img src="https://github.com/j3gad335h/My_Projects/blob/main/resources/img/image1.png" />
+</p>
+
 
 **Object**
 
