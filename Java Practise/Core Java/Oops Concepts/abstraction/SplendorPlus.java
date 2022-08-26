@@ -49,6 +49,6 @@ public class SplendorPlus extends Bike {
 	void breakApplied() {
 		System.out.println("Applying Brakes");
 		
-	}
+	} 
 
 }
