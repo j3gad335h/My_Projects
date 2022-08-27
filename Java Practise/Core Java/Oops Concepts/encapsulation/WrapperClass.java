@@ -47,9 +47,5 @@ public class WrapperClass {
 		this.country = country;
 	}
 	
-	public void setCurrency() {
-		if (country=="India"){
-			
-		}
-	}
+
 }
