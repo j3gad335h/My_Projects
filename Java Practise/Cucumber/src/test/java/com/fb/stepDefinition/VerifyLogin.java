@@ -6,7 +6,6 @@ import io.cucumber.java.en.*;
 
 public class VerifyLogin extends ReusableMethods {
 	LoginPage obj;
-	Hooks hook;
 	@Given("broswer is in facebook Page")
 	public void broswer_is_in_facebook_page() {
 		driver.get("https://www.facebook.com/");

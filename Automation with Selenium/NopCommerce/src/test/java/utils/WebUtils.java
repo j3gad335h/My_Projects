@@ -1,28 +1,30 @@
-package com.fb.stepDefinition;
+package utils;
 
 import java.io.File;
 import java.io.IOException;
 import java.time.Duration;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
+
 import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
-public class ReusableMethods {
-	public static WebDriver driver;
-	
 
-	public void setupBrowser() {
+import io.github.bonigarcia.wdm.WebDriverManager;
+
+public class WebUtils {
+	public static WebDriver driver;
+
+	public void launchBrowser() {
 		System.setProperty("webdriver.chrome.driver", "C:\\chromedriver.exe");
-		driver = new ChromeDriver();
+		driver=new ChromeDriver();
 		driver.manage().window().maximize();
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
-		
-	}
+	 }
 	public void takeSs() throws IOException {
-		// Format Date Time Format e.g 12-02-22 0816-987
+		// Format Date Time Format e.g 12-02-22 0816-987464687
 		DateTimeFormatter dtf = DateTimeFormatter.ofPattern("dd-mm-yy hhmm-ns"); 
 		LocalDateTime ldt = LocalDateTime.now();
 		String date=dtf.format(ldt);

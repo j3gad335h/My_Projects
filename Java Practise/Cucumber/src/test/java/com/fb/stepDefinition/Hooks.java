@@ -21,6 +21,6 @@ public class Hooks extends ReusableMethods {
 			takeSs();
 		}
 		System.out.println("---Closing the Browser---");
-		driver.close();
+		
 	}
 }
