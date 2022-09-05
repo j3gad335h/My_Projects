@@ -16,19 +16,20 @@
 #""
 ## (Comments)
 #Sample Feature Definition Template
-
 Feature: Verify Login Feature
   I want to use this template for my feature file
 
- 
-  Scenario: Successful Login with Valid Credentials
-    Given User Launch Browser
-    And User Opens "https://admin-demo.nopcommerce.com/"
+  @SmokeTest
+  Scenario: Launch url
+    Given User Opens "https://admin-demo.nopcommerce.com/"
+
+  @RegressionTest
+  Scenario: Verify Login Function
+    Given User Opens "https://admin-demo.nopcommerce.com/"
     When User enters email as "admin@yourstore.com" and password as "admin"
     And User Clicks Login
     Then Page Title Should be "Dashboard / nopCommerce administration"
     Then User Click Logout
-    And Close Browser
 #
   #@tag2
   #Scenario Outline: Title of your scenario outline

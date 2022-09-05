@@ -1,25 +1,15 @@
 package stepDefinitions;
 
-
-
-import java.io.IOException;
-
 import io.cucumber.java.en.And;
-import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
+import pages.HomePage;
 import pages.loginPage;
 import utils.WebUtils;
 
-
 public class CheckLogin extends WebUtils {
 	loginPage obj;
-	
-	@Given("User Launch Browser")
-	public void user_launch_browser() {
-		System.out.println("Browser Launched");
-		
-	}
+	HomePage hp;
 
 	@And("User Opens {string}")
 	public void user_opens(String url) {
@@ -29,7 +19,8 @@ public class CheckLogin extends WebUtils {
 
 	@When("User enters email as {string} and password as {string}")
 	public void user_enters_email_as_and_password_as(String email, String password) {
-		obj= new loginPage(driver);
+		obj = new loginPage(driver);
+		hp=new HomePage(driver);
 		obj.email.clear();
 		obj.email.sendKeys(email);
 		obj.password.clear();
@@ -43,12 +34,11 @@ public class CheckLogin extends WebUtils {
 
 	@Then("Page Title Should be {string}")
 	public void page_title_should_be(String expectedTitle) throws Exception {
-		String actualTitle=driver.getTitle();
-		if(expectedTitle.equals(actualTitle)) {
+		String actualTitle = driver.getTitle();
+		if (expectedTitle.equals(actualTitle)) {
 			System.out.println("Page Title Verified");
 			System.out.println("Login Successful");
-		}
-		else {
+		} else {
 			System.out.println("Invalid Page");
 			throw new Exception("Login was unsuccessfull");
 		}
@@ -56,14 +46,10 @@ public class CheckLogin extends WebUtils {
 
 	@Then("User Click Logout")
 	public void user_click_logout() {
-		// Write code here that turns the phrase above into concrete actions
-		throw new io.cucumber.java.PendingException();
+		hp.logoutBtn.click();
+		
 	}
 
-	@And("Close Browser")
-	public void close_browser() {
-		// Write code here that turns the phrase above into concrete actions
-		throw new io.cucumber.java.PendingException();
-	}
+	
 
 }

@@ -9,7 +9,11 @@ import io.cucumber.junit.CucumberOptions;
 @CucumberOptions(
 		features="src/test/resources/Features",
 		glue={"stepDefinitions","hooks"},
-		dryRun=false
+		dryRun=false,
+		monochrome=true,
+		plugin= {"pretty"},
+		tags= ("@SmokeTest or @RegressionTest")
+		
 		)
 public class LoginTestRunner {
 
