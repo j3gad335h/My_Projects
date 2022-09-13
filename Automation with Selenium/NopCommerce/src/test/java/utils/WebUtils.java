@@ -21,7 +21,7 @@ public class WebUtils {
 	public static WebDriver driver;
 
 	public void launchBrowser() {
-		System.setProperty(Constants.CHROME_DRIVER, Constants.CHROME_DRIVER_LOCATION);
+		System.setProperty("webdriver.chrome.driver", "C:\\chromedriver.exe");
 		driver = new ChromeDriver();
 		driver.manage().window().maximize();
 		driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(20));
