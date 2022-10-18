@@ -1,0 +1,91 @@
+<%- include('_header'); -%>
+    <div class="body-content">
+        <h1 class="heading">
+            <%= data['title'] %>
+        </h1>
+        <ul
+            class="ipc-inline-list ipc-inline-list--show-dividers ipc-inline-list--inline ipc-metadata-list-item__list-content baseAlt">
+            <li class="ipc-inline-list__item">2022</li>
+            <li class="ipc-inline-list__item">2h 47m</li>
+        </ul>
+        <br>
+        <br>
+        <div class="row">
+            <div class="col-3">
+                <div><img class="img-cover" src="https://image.tmdb.org/t/p/original<%= data['poster']%>"></div>
+            </div>
+            <div class="col-9">
+                <iframe width="100%" height="100%" src="<%= data['trailer']%>"
+                    frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen></iframe>
+                <!-- <iframe class="embed-responsive-item" width="100%" height="100%"
+                    src="https://www.youtube.com/embed/watch?v=<%= data['trailer']%>" allowfullscreen="true">
+                </iframe> -->
+            </div>
+        </div>
+        <br>
+        <div class="row">
+            <div class="col-3">
+                <div class="aligncenter">
+                    <% for(var i=0; i< data['genres'].length; i++) {%>
+                        <button type="button" class="button-17 btn btn-default">
+                            <%= data['genres'][i]['name'] %>
+                        </button>
+                        <%} %>
+                </div>
+            </div>
+        </div>
+        <br>
+        <div class="row">
+            <div class="col-3">
+                <p>
+                    <%= data['overview'] %>
+                </p>
+            </div>
+            <div class="col-9 ">
+                <ul class="ipc-metadata-list ipc-metadata-list--dividers-all ipc-metadata-list--baseAlt">
+                    <li class="ipc-metadata-list__item">
+                        <span class="ipc-metadata-list-item__label">Director</span>
+                        <div class="ipc-metadata-list-item__content-container">
+                            <ul
+                                class="ipc-inline-list ipc-inline-list--show-dividers ipc-inline-list--inline ipc-metadata-list-item__list-content baseAlt">
+                                <% for(var i=0; i< data['director'].length; i++) {%>
+                                    <li class="ipc-inline-list__item">
+                                        <%= data['director'][i] %>
+                                    </li>
+                                    <%} %>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="ipc-metadata-list__item">
+                        <span class="ipc-metadata-list-item__label">Writers</span>
+                        <div class="ipc-metadata-list-item__content-container">
+                            <ul
+                                class="ipc-inline-list ipc-inline-list--show-dividers ipc-inline-list--inline ipc-metadata-list-item__list-content baseAlt">
+                                <% for(var i=0; i< data['writer'].length; i++) {%>
+                                    <li class="ipc-inline-list__item">
+                                        <%= data['writer'][i]%>
+                                    </li>
+                                    <%} %>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="ipc-metadata-list__item">
+                        <span class="ipc-metadata-list-item__label">Stars</span>
+                        <div class="ipc-metadata-list-item__content-container">
+                            <ul
+                                class="ipc-inline-list ipc-inline-list--show-dividers ipc-inline-list--inline ipc-metadata-list-item__list-content baseAlt">
+                                <% for(var i=0; i< data['actor'].length; i++) {%>
+                                    <li class="ipc-inline-list__item">
+                                        <%= data['actor'][i]%>
+                                    </li>
+                                    <%} %>
+                            </ul>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <%- include ('_footer'); -%>

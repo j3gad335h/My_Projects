@@ -1,0 +1,42 @@
+<%- include('_header'); -%>
+
+    <section>
+        <div class="row">
+            <% for(var i=0; i< data['results'].length; i++){%>
+                <% if(data['results'][i]["poster_path"]!=null && data['results'][i]["poster_path"].length>5){%>
+                    <div class="col-2 cardDesign">
+                        <div class="card">
+                            <a href="/info?id=<%= data['results'][i]['id']%>">
+                                <div class="card-body content">
+                                    <div class="content-overlay"> </div>
+                                    <img src="https://image.tmdb.org/t/p/original<%= data['results'][i]['poster_path']%>" width="100%"
+                                        height="250px">
+                                    <div class="content-details fadeIn-bottom">
+                                        <h3 class="content-title" style="font-size: 14px;"><%=data['results'][i]['title'] %></h3>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <%} else{%>
+                        <div class="col-2 cardDesign">
+                            <div class="card">
+                                <a href="/info?id=<%= data['results'][i]['id']%>">
+                                    <div class="card-body content">
+                                        <div class="content-overlay"> </div>
+                                        <img src="images/no_image_available.jpg" width="100%"
+                                            height="250px">
+                                        <div class="content-details fadeIn-bottom">
+                                            <h3 class="content-title" style="font-size: 14px;"><%=data['results'][i]['title'] %></h3>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                        <%} %>
+                            <%} %>
+
+        </div>
+    </section>
+
+    <%- include ('_footer'); -%>
