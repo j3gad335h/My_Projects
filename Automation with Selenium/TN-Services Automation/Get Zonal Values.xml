@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
-<suite name="Get Parameters">
-  <test thread-count="5" name="Get Parameters">
-    <classes>
-      <class name="com.tnservices.utils.CreateExcelForParameters"/>
-    </classes>
-  </test> <!-- Get Parameters -->
-</suite> <!-- Get Parameters -->
