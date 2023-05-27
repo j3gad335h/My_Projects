@@ -18,8 +18,8 @@
     
       Selenium projects by using Python and Java
       
-  Java Practise
-  
-      Refining my java skills
+## Next JS Projects
+
+<a href="https://weather-app-drab-psi.vercel.app/">Weather Application </a>
       
  
