@@ -1,12 +1,13 @@
 
 <div align="center">
-    <i>Random dev joke for you! (create your own by clicking here ↓)</i><br>
+    <i>Random dev joke for you! (create your own by clicking here ↓)<br/></i>
+    <br/>
     <a href="https://readme-jokes.vercel.app"><img align="center" src="https://readme-jokes.vercel.app/api" alt="README Jokes"></a>
 </div>   
 
 # My Projects
 
-## Next JS
+   ## Next JS
 <a href="https://weather-app-drab-psi.vercel.app/">Weather Application</a>
 
 ## Description
